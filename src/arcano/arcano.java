@@ -4,46 +4,30 @@ public class arcano {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-	}
-	public class Heroe {
 		
-	    
-		  
-	    private String nombre; // El sello de identidad
-	    private int nivel;     // La experiencia en combate
-	    private int poder;     // La fuerza bruta
+		// 1. Invoca al héroe directamente (ya no necesitas "arcano")
+        heroe guerrero = new heroe("Aurelion", 5, 120);
 
-	    // Constructor para inicializar al héroe
-	    public Heroe(String nombre, int nivel, int poder) {
-	        this.nombre = nombre;
-	        this.nivel = nivel;
-	        this.poder = poder;
-	    }
+        // 2. Otorga a la realidad un arma devastadora invocando la clase poder
+        poder arma = new poder("Rayo de Destrucción", 420);
 
-	    // Ritual: Método entrenar()
-	    public void entrenar() {
-	        this.poder += 10; // Aumenta la fuerza bruta en 10 puntos
-	        System.out.println(nombre + " ha completado el ritual de entrenamiento. ¡Su poder aumentó en 10 puntos!");
-	    }
+        // 3. Invoca el método entrenar() del héroe para prepararlo para la guerra
+        guerrero.entrenar();
 
-	    // Métodos Getters y Setters (Opcionales, por si necesitas ver o modificar los datos desde fuera)
-	    public String getNombre() {
-	        return nombre;
-	    }
+        // 4. Desata la furia llamando al método activar() del poder
+        String devastacion = arma.activar();
+        System.out.println(devastacion);
 
-	    public int getNivel() {
-	        return nivel;
-	    }
-
-	    public int getPoder() {
-	        return poder;
-	    }
-
-	    public void setNivel(int nivel) {
-	        this.nivel = nivel;
-	    }
-
+        // 5. Imprime en las runas de la consola los stats finales del héroe
+        System.out.println("\n--- Stats finales del héroe ---");
+        System.out.println("Nombre: " + guerrero.getNombre());
+        System.out.println("Nivel: " + guerrero.getNivel());
+        System.out.println("Poder: " + guerrero.getPoder());
+    }
 }
 
-}
+	
+	
+
+
+
